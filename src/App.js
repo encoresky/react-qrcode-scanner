@@ -1,5 +1,4 @@
-import './App.css';
-import Qruploader from './components/qr-uploader/qruploader';
+import Qruploader from './components/QrUploader/QrUploader';
 
 function App() {
   return (

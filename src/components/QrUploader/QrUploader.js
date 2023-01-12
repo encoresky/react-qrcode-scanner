@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import "./qr-uploader.css";
+import "./QrUploader.css";
 
 const Qruploader = () => {
   const fileRef = useRef(null);
