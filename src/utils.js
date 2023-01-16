@@ -4,7 +4,7 @@ export const isMediaDevicesSupported = () => {
   
     if (!isMediaDevicesSupported) {
       console.warn(
-        `[ReactQrReader]: MediaDevices API has no support for your browser. You can fix this by running "npm i webrtc-adapter"`
+        `[@encoreskytech/react-qr-scanner]: MediaDevices API has no support for your browser. You can fix this by running "npm i webrtc-adapter"`
       );
     }
   
@@ -15,7 +15,7 @@ export const isMediaDevicesSupported = () => {
     const isValid = typeof value === type;  
     if (!isValid) {
       console.warn(
-        `[ReactQrReader]: Expected "${name}" to be a of type "${type}".`
+        `[@encoreskytech/react-qr-scanner]: Expected "${name}" to be a of type "${type}".`
       );
     }
   
