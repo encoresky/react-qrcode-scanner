@@ -33,7 +33,6 @@ const Qruploader = () => {
     <div className="wrapper">
       <input type="file" ref={fileRef} onChange={(e) => onFileClick(e)} />
       <div className="content">
-        <i className="fas fa-cloud-upload"></i>
         <p id="upload">{infoText}</p>
       </div>
     </div>
