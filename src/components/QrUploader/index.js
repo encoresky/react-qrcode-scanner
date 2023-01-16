@@ -1,12 +1,15 @@
 import { useRef, useState } from "react";
-import "./QrUploader.css";
+import "./index.css";
 
-const Qruploader = () => {
+const QrUploader = ({
+  onResult = () => { },
+  onError = () => { },
+  className = ""
+}) => {
   const fileRef = useRef(null);
   const [infoText, setInfoText] = useState("Upload QR");
 
-  const fetchRequest = (file, formData) => {
-
+  const fetchRequest = (formData) => {
     setInfoText("Scanning QR...");
     fetch("http://api.qrserver.com/v1/read-qr-code/", {
       method: "POST",
@@ -16,11 +19,12 @@ const Qruploader = () => {
       .then((res) => res.json())
       .then((result) => {
         result = result[0].symbol[0].data;
-        console.log(result);
+        onResult(result)
         if (!result) return;
       })
-      .catch(() => {
+      .catch((error) => {
         setInfoText("Couldn't scan QR Code");
+        onError(error)
       });
   };
   const onFileClick = (e) => {
@@ -29,8 +33,9 @@ const Qruploader = () => {
     formData.append("file", e.target.files[0]);
     fetchRequest(e.target.files[0], formData);
   };
+
   return (
-    <div className="wrapper">
+    <div className={`wrapper ${className}`}>
       <input type="file" ref={fileRef} onChange={(e) => onFileClick(e)} />
       <div className="content">
         <p id="upload">{infoText}</p>
@@ -39,4 +44,4 @@ const Qruploader = () => {
   );
 };
 
-export default Qruploader;
+export default QrUploader;

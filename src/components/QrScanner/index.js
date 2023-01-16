@@ -1,5 +1,5 @@
 import { useQrReader } from "../../hooks/useQrReader";
-import "./QrScanner.css";
+import "./index.css";
 
 const QrScanner = ({
   videoContainerStyle,
@@ -7,7 +7,6 @@ const QrScanner = ({
   constraints = {
     facingMode: "user"
   },
-  ViewFinder,
   scanDelay = 500,
   className,
   onResult,
@@ -23,16 +22,15 @@ const QrScanner = ({
   return (
     <section className={className}>
       <div
-        className="container"
+        className="qr-container"
         style={{
           ...videoContainerStyle
         }}
       >
-        {!!ViewFinder && <ViewFinder />}
         <video
           muted
           id={videoId}
-          className="video"
+          className="qr-video"
           style={{
             ...videoStyle,
             transform: "scaleX(-1)"

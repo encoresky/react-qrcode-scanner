@@ -1,10 +1,10 @@
-.container {
+.qr-container {
     width: "100%";
     padding-top: "100%";
     overflow: "hidden";
     position: "relative";
 }
-.video{
+.qr-video{
     top: 0;
     left: 0;
     width: "100%";
@@ -12,11 +12,10 @@
     display: "block";
     overflow: "hidden";
     position: "absolute";
-    border: 1px solid black;
     margin-top: 50px;
 }
 @media (max-width:767px) {
-    .video{
+    .qr-video{
         height: 100vh;
         width: 100vw;
     }
