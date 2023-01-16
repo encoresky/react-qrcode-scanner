@@ -1,0 +1,60 @@
+{
+  "name": "qr-scanner",
+  "version": "1.0.0",
+  "dependencies": {
+    "@zxing/browser": "0.1.1",
+    "@zxing/library": "0.19.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/encoresky/react-qrcode-scanner.git"
+  },
+  "keywords": [
+    "react",
+    "qr",
+    "qr-code",
+    "qrcode",
+    "qrcode-reader",
+    "scanner",
+    "react-qrcode-scanner",
+    "qr-scanner"
+  ],
+  "author": "Encoresky Technology",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/encoresky/react-qrcode-scanner/issues"
+  },
+  "homepage": "https://github.com/encoresky/react-qrcode-scanner#readme"
+}

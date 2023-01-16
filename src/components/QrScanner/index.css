@@ -1,0 +1,22 @@
+.qr-container {
+    width: "100%";
+    padding-top: "100%";
+    overflow: "hidden";
+    position: "relative";
+}
+.qr-video{
+    top: 0;
+    left: 0;
+    width: "100%";
+    height: "100%";
+    display: "block";
+    overflow: "hidden";
+    position: "absolute";
+    margin-top: 50px;
+}
+@media (max-width:767px) {
+    .qr-video{
+        height: 100vh;
+        width: 100vw;
+    }
+}
